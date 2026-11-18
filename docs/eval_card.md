@@ -3,9 +3,9 @@
 Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10. Mọi số liệu dưới đây lấy từ report do script sinh trong `src/reports/`, không gõ tay.
 
 - **Run ID / eval set SHA:**
-  - baseline `E-swarm-20261118-a707` · PR tốt `E-fixed-20261118-a707` · PR tệ `E-seeded_regression-20261118-a707`
-  - eval set v1 sha `a70791495d8c`
-- **Phiên bản:** code = commit của PR này (nhánh `starter/d09`) · eval set v1 (sha `a70791495d8c`) · metric_spec `1.0` (`config/metric_spec.yaml`) · grader = `src/lab9/graders.py` cùng commit · seeds 11/22/33/44/55
+  - baseline `E-swarm-20261118-0ac4` · PR tốt `E-fixed-20261118-0ac4` · PR tệ `E-seeded_regression-20261118-0ac4`
+  - eval set v1 sha `0ac4668070df`
+- **Phiên bản:** code = commit của PR này (nhánh `starter/d09`) · eval set v1 (sha `0ac4668070df`) · metric_spec `1.0` (`config/metric_spec.yaml`) · grader = `src/lab9/graders.py` cùng commit · seeds 11/22/33/44/55
 - **Eval set:** v1, 14 item × 5 seed = 70 trial, nguồn `lab8_public`; nhãn ở file riêng `labels_v1.json`. `failure_modes` gắn theo `docs/failure_taxonomy.md`; `evalset --check` = 0 problem.
 - **Metric & ngưỡng** (`config/metric_spec.yaml`):
 
@@ -49,7 +49,7 @@ Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10. Mọi s�
 
 ## v2 (M5–M7): eval set v2 + slice + nhiễu + chống gian lận
 
-- **Run ID:** baseline v2 `E-swarm-20261118-c9e1` · eval set v2 sha `c9e1c58df432` (28 item = 14 v1 + 14 adversarial, × 5 seed = 140 trial) · metric_spec `2.0`.
+- **Run ID:** baseline v2 `E-swarm-20261118-b274` · eval set v2 sha `b2746a873570` (28 item = 14 v1 + 14 adversarial, × 5 seed = 140 trial) · metric_spec `2.0`.
 - **fm_map** (`config/fm_map.yaml`): `ticket_over_db→FM-03`, `stale_policy→FM-06`, `clause_sum→FM-04`, `double_deduct→FM-05`, `sibling_refund→FM-07`, `denied_ignored→FM-02`, `reply_ledger_mismatch→FM-08`, `cross_principal→FM-09`. Không cần FM mới; `evalset --v2 --build` = 0 problem (mỗi FM bị tấn công ≥ 3 item).
 - **Baseline v2 (`swarm`):** pass_rate 0.9786 · pass_hat_5 0.8929 (25/28 item qua đủ 5 seed) · refund_amount_correct 0.9786 · reply_matches_ledger 1.0 · approval_bypass 0 · secret_leak 0.
 

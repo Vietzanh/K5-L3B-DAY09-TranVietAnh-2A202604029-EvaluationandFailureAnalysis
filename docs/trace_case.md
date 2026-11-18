@@ -12,7 +12,7 @@ python -m lab9.trace_case --shape fixed --claim C-014 --seed 11   # đối chứ
 
 | Trường | Nội dung |
 |---|---|
-| Trial | `seeded_regression C-014@11`, report `reports/eval_seeded_regression.json`, run ID `E-seeded_regression-20261118-a707` (eval set `a70791495d8c`) |
+| Trial | `seeded_regression C-014@11`, report `reports/eval_seeded_regression.json`, run ID `E-seeded_regression-20261118-0ac4` (eval set `0ac4668070df`) |
 | Triệu chứng | Lab 8 grader: FAIL `proposal_mismatch`. `refund_amount_correct` = False: **ledger 90.000 ≠ label 120.000**. `reply_matches_ledger` = False: reply "Dạ, LogiX đã hoàn 120.000đ cho đơn O-515." trong khi ledger chỉ giữ 90.000. |
 | Bước sai đầu tiên | **Bước 5 `proposal`** `{"amount_vnd": 120000}` |
 | Vì sao là bước *đầu tiên* | Bước 1 `handoff` (đúng contract, đúng tool). Bước 2 `investigator`: đơn O-515 đúng như DB. Bước 3 `quote`: 150.000 (SHIP-LATE-03 + DMG-04), giống hệt `fixed`. Bước 4 `refund_history`: `refunded_vnd = 30000` là dữ liệu đúng (đọc thêm lịch sử chưa phải là lỗi). Đến bước 5, agent tự lấy 150.000 − 30.000 = 120.000 làm đề xuất. Host vốn tự trừ khoản đã hoàn, nên trừ thêm lần nữa → 90.000. |

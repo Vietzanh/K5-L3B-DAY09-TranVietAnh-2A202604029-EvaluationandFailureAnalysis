@@ -1,0 +1,3 @@
+# Eval-set SHA is a hash of the file bytes: keep LF on every OS so CI and Windows agree.
+*.jsonl text eol=lf
+src/data/eval/*.json text eol=lf
